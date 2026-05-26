@@ -2,6 +2,8 @@ package hcmute.model;
 
 import java.time.LocalDate;
 
+import hcmute.service.Library;
+
 public class Librarian {
 
     private String librarianId;
@@ -60,7 +62,7 @@ public class Librarian {
         }
 
         // Kiểm tra giới hạn
-        if (borrowingCount >= reader.getMaxBorrowBooks()) {
+        if (borrowingCount >= reader.getMaxBorrow()) {
 
             System.out.println("Borrow limit exceeded!");
             return;

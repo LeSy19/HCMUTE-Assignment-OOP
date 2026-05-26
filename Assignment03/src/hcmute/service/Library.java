@@ -1,7 +1,11 @@
-package hcmute.model;
+package hcmute.service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+
+import hcmute.model.Book;
+import hcmute.model.BorrowSlip;
+import hcmute.model.Reader;
 
 public class Library {
     private ArrayList<Book> books;
@@ -96,4 +100,22 @@ public class Library {
             }
         }
     }
+
+    // in danh sach book
+    public void displayBooks() {
+        for (Book book : books) {
+            book.displayInfo();
+        }
+    }
+
+    // In danh sách độc giả
+    public void displayReaders() {
+
+        System.out.println("\n===== DANH SACH DOC GIA =====");
+
+        for (Reader reader : readers) {
+            System.out.println(reader);
+        }
+    }
+
 }
