@@ -11,7 +11,18 @@ public class Student extends Reader {
     }
 
     @Override
+    public double calculateLateFee(int daysLate) {
+        return daysLate * 2000; // Sinh viên trả chậm mỗi ngày phải trả 2000đ
+    }
+
+    @Override
     public String toString() {
         return super.toString() + " |Type: Student";
+    }
+
+    @Override
+    public String getInfo() {
+        return "[SV] " + getReaderId() + " | " + getFullName() + " | "
+                + "Email: " + getEmail() + " | Han muon: " + getMaxBorrow() + " cuon";
     }
 }

@@ -35,31 +35,11 @@ public class Main {
                 library.addBooks(b2);
 
                 // Thêm độc giả
-                Student r1 = new Student(
-                                "R01",
-                                "Nguyen Van A",
-                                "abc@gmail.com");
+                Reader sv = new Student("001", "Le Van Sy", "sy@gmail.com");
+                Reader gv = new Lecturer("002", "Phan Hieu Nghia", "nghia@gmail.com");
 
-                Student r2 = new Student(
-                                "R02",
-                                "Tran Thi B",
-                                "sy@gmail.com");
-
-                // Thêm độc giả
-                Lecturer l1 = new Lecturer(
-                                "L01",
-                                "Nguyen Van A",
-                                "abc@gmail.com");
-
-                Lecturer l2 = new Lecturer(
-                                "L02",
-                                "Tran Thi B",
-                                "sy@gmail.com");
-
-                library.addReaders(r1);
-                library.addReaders(r2);
-                library.addReaders(l1);
-                library.addReaders(l2);
+                library.addReaders(sv);
+                library.addReaders(gv);
 
                 // // Tìm kiếm sách theo tên
                 // library.searchBooksByTitle("Database");
@@ -85,10 +65,18 @@ public class Main {
                 // library.getOverdueSlips(java.time.LocalDate.now().plusDays(8));
 
                 System.out.println("===== DANH SACH SACH =====");
-                library.displayBooks();
+                library.showAllBooks();
 
                 System.out.println("===== DANH SACH DOC GIA =====");
-                library.displayReaders();
+                library.showAllReaders();
 
+                System.out.println("===== TINH PHI TRE HAN =====");
+                library.showLateFee(7);
+
+                System.out.println("===== HAN MUON =====");
+                Reader[] reader = { sv, gv };
+                for (Reader r : reader) {
+                        System.out.println(r.getFullName() + ": " + r.getMaxBorrow() + " cuon");
+                }
         }
 }

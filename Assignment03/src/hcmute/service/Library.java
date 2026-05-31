@@ -102,19 +102,28 @@ public class Library {
     }
 
     // in danh sach book
-    public void displayBooks() {
+    public void showAllBooks() {
         for (Book book : books) {
             book.displayInfo();
         }
     }
 
     // In danh sách độc giả
-    public void displayReaders() {
+    public void showAllReaders() {
 
         System.out.println("\n===== DANH SACH DOC GIA =====");
 
         for (Reader reader : readers) {
-            System.out.println(reader);
+            System.out.println(reader.getInfo());
+        }
+    }
+
+    // In phí phạt của tất cả độc giả (giả sử daysLate = 7)
+    public void showLateFee(int daysLate) {
+        System.out.println("======= PHI PHAT TRE HAN: (" + daysLate + " ngay) ========");
+        for (Reader reader : readers) {
+            System.out.printf("%-25s | Fee: %,.0f VND%n",
+                    reader.getFullName(), reader.calculateLateFee(daysLate));
         }
     }
 

@@ -15,4 +15,16 @@ public class Lecturer extends Reader {
         return super.toString() + " |Type: Lecturer";
     }
 
+    @Override
+    public double calculateLateFee(int daysLate) {
+        return daysLate * 1000; // Giảng viên trả chậm mỗi ngày phải trả 1000đ
+    }
+
+    @Override
+    public String getInfo() {
+        return "[GV] " + getReaderId() + " | " + getFullName()
+                + " | Email: " + getEmail()
+                + " | Han muon: " + getMaxBorrow() + " cuon";
+    }
+
 }

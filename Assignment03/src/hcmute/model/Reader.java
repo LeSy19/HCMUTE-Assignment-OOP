@@ -1,6 +1,6 @@
 package hcmute.model;
 
-public class Reader {
+public abstract class Reader {
 
     private String readerId;
     private String fullName;
@@ -41,21 +41,24 @@ public class Reader {
         System.out.println(fullName + "registered library card ");
     }
 
-    public int getMaxBorrow() {
-        return 0;
-    }
+    public abstract int getMaxBorrow();
 
-    @Override
-    public String toString() {
-        return "Reader ID: " + readerId + "| Name: " + fullName + "| Email: " + email;
-    }
+    public abstract double calculateLateFee(int daysLate);
 
-    // Hiển thị thông tin
-    public void displayInfo() {
-        System.out.println("Reader ID: " + readerId);
-        System.out.println("Name: " + fullName);
-        System.out.println("Email: " + email);
+    public abstract String getInfo();
 
-    }
+    // @Override
+    // public String toString() {
+    // return "Reader ID: " + readerId + "| Name: " + fullName + "| Email: " +
+    // email;
+    // }
+
+    // // Hiển thị thông tin
+    // public void displayInfo() {
+    // System.out.println("Reader ID: " + readerId);
+    // System.out.println("Name: " + fullName);
+    // System.out.println("Email: " + email);
+
+    // }
 
 }
