@@ -1,8 +1,11 @@
 package hcmute.main;
 
 import hcmute.model.Book;
+import hcmute.model.GuestAccount;
 import hcmute.model.Lecturer;
+import hcmute.model.LecturerAccount;
 import hcmute.model.Librarian;
+import hcmute.model.LibraryCard;
 import hcmute.model.Reader;
 import hcmute.model.Student;
 import hcmute.service.Library;
@@ -78,5 +81,33 @@ public class Main {
                 for (Reader r : reader) {
                         System.out.println(r.getFullName() + ": " + r.getMaxBorrow() + " cuon");
                 }
+
+                GuestAccount guest = new GuestAccount("G01", "Nguyen Van Hoang");
+                LibraryCard card = new LibraryCard("C01", "The Thu Vien", "RF123");
+
+                LecturerAccount lecturer = new LecturerAccount(
+                                "L01",
+                                "Thay Nam",
+                                "123456",
+                                null);
+
+                System.out.println("=== Guest ===");
+
+                guest.requestDownload(0);
+                guest.requestDownload(1);
+
+                System.out.println();
+                System.out.println("=== Library Card ===");
+
+                card.requestDownload(0);
+                card.requestDownload(1);
+                card.requestDownload(2);
+
+                System.out.println();
+
+                System.out.println("=== Lecturer ===");
+
+                lecturer.requestDownload(10);
+                lecturer.requestDownload(100);
         }
 }
