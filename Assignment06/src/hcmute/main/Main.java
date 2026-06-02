@@ -10,6 +10,8 @@ import hcmute.model.Reader;
 import hcmute.model.SeniorReader;
 import hcmute.model.Student;
 import hcmute.service.Library;
+import hcmute.service.Library.CharityFeePolicy;
+import hcmute.service.Library.WaivedFeePolicy;
 
 public class Main {
         public static void main(String[] args) throws Exception {
@@ -25,7 +27,8 @@ public class Main {
                                 "James Gosling",
                                 2020,
                                 5,
-                                0);
+                                0,
+                                true);
 
                 Book b2 = new Book(
                                 "B02",
@@ -33,7 +36,8 @@ public class Main {
                                 "Thomas Connolly",
                                 2019,
                                 3,
-                                2);
+                                2,
+                                false);
 
                 library.addBooks(b1);
                 library.addBooks(b2);
@@ -47,22 +51,18 @@ public class Main {
                 library.addReaders(gv);
                 library.addReaders(sr);
 
-                // 2.1 Dynamic biding qua showAllReaders
-                library.showAllReaders();
-                // 3 dong output, moi dong theo dinh dang rieng cua tung lop con
+                // Tháng bình thường:
+                System.out.println("=== Thang binh thuong ===");
+                library.caculateTotalLateFee(7);
 
-                // 2.2 Dynamic biding qua caculateTotalLateFee
-                double total = library.caculateTotalLateFee(5);
-                System.out.printf("\nTong tien phat neu qua han 5 ngay: %.0f VND%n", total);
+                // Tháng từ thiện — chỉ đổi policy, không sửa code Library
+                library.setFeePolicy(library.new CharityFeePolicy());
+                System.out.println("\n=== Thang tu thien ===");
+                library.caculateTotalLateFee(7);
 
-                // 2.3 tim kiem va dung Dynamic biding tren ket qua
-                Reader found = library.findReaderByName("sy");
-                if (found != null) {
-                        System.out.println(found.getInfo());
-                        System.out.println(found.getMaxBorrow());
-                }
+                // Tháng khai trương — miễn phí
+                library.setFeePolicy(library.new WaivedFeePolicy());
+                System.out.println("\n=== Thang khai truong ===");
 
-                // 2.4 downcast an toan
-                library.printSeniorReaders();
         }
 }

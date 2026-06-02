@@ -6,7 +6,7 @@ public class Lecturer extends Reader {
     }
 
     @Override
-    public int getMaxBorrow() {
+    public int getMaxBorrowLimit() {
         return 5; // Giảng viên có thể mượn tối đa 5 sách
     }
 
@@ -24,7 +24,17 @@ public class Lecturer extends Reader {
     public String getInfo() {
         return "[GV] " + getReaderId() + " | " + getFullName()
                 + " | Email: " + getEmail()
-                + " | Han muon: " + getMaxBorrow() + " cuon";
+                + " | Han muon: " + getMaxBorrowLimit() + " cuon";
+    }
+
+    @Override
+    protected boolean checkSpecialCondition(Book book) {
+        return true;
+    }
+
+    @Override
+    protected String getSpecialConditionMessage() {
+        return "Sách tham khảo chỉ đọc tại chỗ - giảng viên không được mang về!";
     }
 
 }

@@ -62,7 +62,7 @@ public class Librarian {
         }
 
         // Kiểm tra giới hạn
-        if (borrowingCount >= reader.getMaxBorrow()) {
+        if (borrowingCount >= reader.getMaxBorrowLimit()) {
 
             System.out.println("Borrow limit exceeded!");
             return;

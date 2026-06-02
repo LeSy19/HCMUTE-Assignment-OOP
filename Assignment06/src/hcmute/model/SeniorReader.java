@@ -9,7 +9,7 @@ public class SeniorReader extends Reader {
     }
 
     @Override
-    public int getMaxBorrow() {
+    public int getMaxBorrowLimit() {
         return Integer.MAX_VALUE;
     }
 
@@ -33,6 +33,22 @@ public class SeniorReader extends Reader {
 
     public void setSeniorCardNumber(String seniorCardNumber) {
         this.seniorCardNumber = seniorCardNumber;
+    }
+
+    @Override
+    protected boolean checkSpecialCondition(Book book) {
+        return true;
+    }
+
+    @Override
+    protected String getSpecialConditionMessage() {
+        return "";
+    }
+
+    @Override
+    protected void onBorrowSuccess(Book book) {
+        super.onBorrowSuccess(book); // in thông báo thông thường
+        System.out.println("-> Đã ghi nhận: Người cao tuổi - không thu phí phạt");
     }
 
 }

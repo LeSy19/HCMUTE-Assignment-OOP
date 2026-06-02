@@ -8,14 +8,17 @@ public class Book {
     private int publishYear;
     private int quantity;
     private int borrowCount;
+    private boolean referenceOnly; // Sách tham khảo chỉ đọc tại chỗ
 
-    public Book(String bookId, String title, String author, int publishYear, int quantity, int borrowCount) {
+    public Book(String bookId, String title, String author, int publishYear, int quantity, int borrowCount,
+            boolean referenceOnly) {
         this.bookId = bookId;
         this.title = title;
         this.author = author;
         this.publishYear = publishYear;
         this.quantity = quantity;
         this.borrowCount = 0;
+        this.referenceOnly = referenceOnly; // Sử dụng giá trị được truyền vào
     }
 
     public String getBookId() {
@@ -60,6 +63,14 @@ public class Book {
 
     public void setBorrowCount(int borrowCount) {
         this.borrowCount = borrowCount;
+    }
+
+    public boolean isReferenceOnly() {
+        return referenceOnly;
+    }
+
+    public void setReferenceOnly(boolean referenceOnly) {
+        this.referenceOnly = referenceOnly;
     }
 
     public boolean checkAvailability() {
