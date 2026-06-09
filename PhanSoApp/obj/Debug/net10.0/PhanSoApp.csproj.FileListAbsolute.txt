@@ -1,0 +1,15 @@
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\bin\Debug\net10.0\PhanSoApp.exe
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\bin\Debug\net10.0\PhanSoApp.deps.json
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\bin\Debug\net10.0\PhanSoApp.runtimeconfig.json
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\bin\Debug\net10.0\PhanSoApp.dll
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\bin\Debug\net10.0\PhanSoApp.pdb
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.AssemblyInfoInputs.cache
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.AssemblyInfo.cs
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.csproj.CoreCompileInputs.cache
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.sourcelink.json
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.dll
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\refint\PhanSoApp.dll
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.pdb
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\PhanSoApp.genruntimeconfig.cache
+D:\HCMUTE\Laptrinhhuongdoituong(OOP)\PhanSoApp\obj\Debug\net10.0\ref\PhanSoApp.dll
