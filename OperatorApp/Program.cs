@@ -1,20 +1,20 @@
 ﻿// VECTOR2D
 
-// Vector2D v1 = new Vector2D(3, 4);
-// Vector2D v2 = new Vector2D(1, 2);
+Vector2D v1 = new Vector2D(3, 4);
+Vector2D v2 = new Vector2D(1, 2);
 
-// Console.WriteLine($"v1 = {v1}");
-// Console.WriteLine($"v2 = {v2}");
+Console.WriteLine($"v1 = {v1}");
+Console.WriteLine($"v2 = {v2}");
 
-// Console.WriteLine($"v1 + v2 = {v1 + v2}");
-// Console.WriteLine($"v1 - v2 = {v1 - v2}");
-// Console.WriteLine($"v1 * 2 = {v1 * 2}");
-// Console.WriteLine($"3 * v2 = {3 * v2}");
-// Console.WriteLine($"-v1 = {-v1}");
-// Console.WriteLine($"|v1|   = {v1.DoDai:F4}");
+Console.WriteLine($"v1 + v2 = {v1 + v2}");
+Console.WriteLine($"v1 - v2 = {v1 - v2}");
+Console.WriteLine($"v1 * 2 = {v1 * 2}");
+Console.WriteLine($"3 * v2 = {3 * v2}");
+Console.WriteLine($"-v1 = {-v1}");
+Console.WriteLine($"|v1|   = {v1.DoDai:F4}");
 
-// Console.WriteLine($"v1 * v2 = {v1 * v2}");
-// Console.WriteLine($"v1 == v2? {v1 == v2}");
+Console.WriteLine($"v1 * v2 = {v1 * v2}");
+Console.WriteLine($"v1 == v2? {v1 == v2}");
 
 // MONEY
 
