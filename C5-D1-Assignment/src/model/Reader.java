@@ -28,6 +28,11 @@ public class Reader implements Notifiable {
         return Collections.unmodifiableList(notifications);
     }
 
+    @Override
+    public String toString() {
+        return "Reader{id='" + readerId + "', name='" + name + "'}";
+    }
+
     public String getReaderId() {
         return readerId;
     }

@@ -41,6 +41,11 @@ public class Book implements Borrowable {
     }
 
     @Override
+    public String toString() {
+        return "Book{BookId='" + bookId + "', title='" + title + "', author='" + author + "'}";
+    }
+
+    @Override
     public String getBorrowId() {
         return currentBorrowerId;
     }
